@@ -12,7 +12,7 @@ then
     exit 1
 fi
 
-number_of_lines=$(grep -srch $2 $1* | paste -sd+ | bc)
+number_of_lines=$(grep -sorch $2 $1* | wc -l)
 number_of_files=$(find $1 -type f -name "*" | wc -l)
 
 
